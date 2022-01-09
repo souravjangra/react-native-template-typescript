@@ -23,7 +23,7 @@ import { PersistGate } from 'redux-persist/integration/react';
 enableScreens();
 
 let EntryPoint;
-const showStorybook = true;
+const showStorybook = false;
 
 if (showStorybook && __DEV__) {
   EntryPoint = getStorybookUI();
