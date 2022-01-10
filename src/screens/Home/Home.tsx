@@ -20,7 +20,6 @@ import { Typography } from '@components/molecules/Typography';
 import { CommonStackParamList } from '@screens/index';
 import { theme } from 'theme';
 import { useTheme } from '@hooks/index';
-import { log } from '@utils/console';
 
 type HomeScreenNavigationProp = NativeStackNavigationProp<
   CommonStackParamList,
