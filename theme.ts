@@ -3,7 +3,7 @@
  * Created Date: Saturday, January 8th 2022
  * Author: Sourav Jangra (sourav@radiansys.com)
  * -----
- * Last Modified: Saturday, January 8th 2022 12:33:18 pm
+ * Last Modified: Sunday, January 9th 2022 11:17:23 pm
  * Modified By: Sourav Jangra
  * -----
  * Copyright (c) 2022 Radiansys Inc
@@ -67,4 +67,30 @@ const theme: DefaultTheme = {
   },
 };
 
-export { theme };
+const light = {
+  ...theme,
+  colors: {
+    primary: colors.PRIMARY,
+    secondary: colors.SECONDARY,
+    black: colors.BLACK,
+    white: colors.WHITE,
+    success: colors.SUCCESS,
+    backgroundColor: colors.BACKGROUND_COLOR,
+    grayLight: colors.GRAY_LIGHT,
+  },
+};
+
+const dark = {
+  ...theme,
+  colors: {
+    primary: colors.PRIMARY,
+    secondary: colors.SECONDARY,
+    black: colors.BLACK,
+    white: colors.WHITE,
+    success: colors.SUCCESS,
+    backgroundColor: colors.BACKGROUND_COLOR,
+    grayLight: colors.GRAY_LIGHT,
+  },
+};
+
+export { theme, light, dark };

@@ -3,20 +3,22 @@
  * Created Date: Friday, January 7th 2022
  * Author: Sourav Jangra (sourav@radiansys.com)
  * -----
- * Last Modified: Friday, January 7th 2022 10:51:15 am
+ * Last Modified: Sunday, January 9th 2022 11:17:23 pm
  * Modified By: Sourav Jangra
  * -----
  * Copyright (c) 2022 Radiansys Inc
  */
 
-import React from 'react';
+import React, { createContext } from 'react';
 import { FileLogger } from 'react-native-file-logger';
 import useAppState from 'react-native-appstate-hook';
-import { warn } from '@utils/console';
+import { log, warn } from '@utils/console';
 import { ThemeProvider } from 'styled-components';
 import { useNavigationMounting } from '@navigation/RootNavigation';
 import Router from '@navigation/Router';
 import { theme } from 'theme';
+import { Appearance } from 'react-native';
+import { ManageThemeProvider } from '@hoc/index';
 
 FileLogger.configure({
   maximumFileSize: 1024 * 1024 * 5, // 5MB,
@@ -33,9 +35,9 @@ const App = () => {
   });
 
   return (
-    <ThemeProvider theme={theme}>
+    <ManageThemeProvider>
       <Router />
-    </ThemeProvider>
+    </ManageThemeProvider>
   );
 };
 

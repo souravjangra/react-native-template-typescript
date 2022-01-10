@@ -45,6 +45,7 @@
       "@config/*": ["src/config/*"],
       "@constants/*": ["src/constants/*"],
       "@helpers/*": ["src/helpers/*"],
+      "@hoc/*": ["src/hoc/*"],
       "@hooks/*": ["src/hooks/*"],
       "@interfaces/*": ["src/interfaces/*"],
       "@localization/*": ["src/localization/*"],

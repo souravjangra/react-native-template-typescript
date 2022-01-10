@@ -3,7 +3,7 @@
  * Created Date: Saturday, January 8th 2022
  * Author: Sourav Jangra (sourav@radiansys.com)
  * -----
- * Last Modified: Saturday, January 8th 2022 11:45:48 am
+ * Last Modified: Sunday, January 9th 2022 11:17:23 pm
  * Modified By: Sourav Jangra
  * -----
  * Copyright (c) 2022 Radiansys Inc
@@ -109,18 +109,18 @@ module.exports = (plop) => {
         // Add the index file
         type: 'add',
         // Path for the index file
-        path: 'src/screens/{{pascalCase name}}/index.tsx',
+        path: 'src/screens/{{pascalCase name}}/index.ts',
         // Handlebars template used to generate content of new file
         templateFile: 'plop-templates/ExportIndex.js.hbs',
       },
-      //   {
-      //     // Add a new file
-      //     type: 'add',
-      //     // Path for the new file
-      //     path: 'src/screens/{{pascalCase name}}.tsx',
-      //     // Handlebars template used to generate content of new file
-      //     templateFile: 'plop-templates/CommonScreen.js.hbs',
-      //   },
+      {
+        // Add the style file
+        type: 'add',
+        // Path for the style file
+        path: 'src/screens/{{pascalCase name}}/Style.tsx',
+        // Handlebars template used to generate content of new file
+        templateFile: 'plop-templates/Style.js.hbs',
+      },
     ],
   });
 };

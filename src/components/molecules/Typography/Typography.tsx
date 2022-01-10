@@ -48,7 +48,7 @@ const variantStyle = (theme: DefaultTheme) => {
   });
 };
 
-const Typography = styled.View<TypographyProps>`
+const Typography = styled.Text<TypographyProps>`
   ${compose(color, layout, space, borders, flex, position, flexbox)}
   ${({ theme }) => variantStyle(theme)}
 `;

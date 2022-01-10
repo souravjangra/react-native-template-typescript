@@ -126,6 +126,7 @@
     "*.{js,ts,tsx}": [
       "eslint . --fix",
       "prettier --write .",
+      "tslint --fix --project .",
       "jest --bail --findRelatedTests"
     ]
   }
