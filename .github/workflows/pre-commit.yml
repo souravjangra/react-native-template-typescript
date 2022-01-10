@@ -18,6 +18,8 @@ jobs:
               uses: actions/setup-node@v2
               with:
                   node-version: 16.x
+            - name: ci
+              run: npm install      
             - name: format
               run: npm run prettier
             - name: lint
