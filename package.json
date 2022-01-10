@@ -8,6 +8,8 @@
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "prettier": "prettier --write .",
+    "ts-lint": "",
     "storybook": "start-storybook -p 7007",
     "build-storybook": "build-storybook",
     "generate": "plop",
