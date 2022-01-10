@@ -3,7 +3,7 @@
  * Created Date: Saturday, January 8th 2022
  * Author: Sourav Jangra
  * -----
- * Last Modified: Monday, January 10th 2022 3:09:41 pm
+ * Last Modified: Monday, January 10th 2022 8:06:24 pm
  * Modified By: Sourav Jangra
  * -----
  * Copyright (c) 2022 Radiansys Inc
@@ -46,9 +46,7 @@ export default function Router() {
             .then(() => {})
             .catch((err) => {});
         }, 3000);
-        // eslint-disable-next-line react/jsx-closing-bracket-location
-      }}
-    >
+      }}>
       <SafeAreaProvider>
         <Stack.Navigator screenOptions={screenOptions}>
           {Object.entries({

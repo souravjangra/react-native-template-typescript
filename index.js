@@ -3,7 +3,7 @@
  * Created Date: Friday, January 7th 2022
  * Author: Sourav Jangra (sourav@radiansys.com)
  * -----
- * Last Modified: Monday, January 10th 2022 2:56:02 pm
+ * Last Modified: Monday, January 10th 2022 6:28:42 pm
  * Modified By: Sourav Jangra
  * -----
  * Copyright (c) 2022 Radiansys Inc
@@ -30,7 +30,7 @@ const showStorybook = false;
 if (showStorybook && __DEV__) {
   EntryPoint = getStorybookUI();
 } else {
-  EntryPoint = function () {
+  EntryPoint = function RootApp() {
     return (
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>

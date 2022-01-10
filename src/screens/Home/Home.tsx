@@ -28,8 +28,7 @@ function HomeScreen() {
         <Button
           onPress={() => {
             navigation.goBack();
-          }}
-        >
+          }}>
           <Typography>Back Home</Typography>
         </Button>
       </Box>

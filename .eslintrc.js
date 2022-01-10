@@ -32,7 +32,7 @@ module.exports = {
       2,
       { extensions: ['.js', '.jsx', '.ts', '.tsx'] },
     ],
-    'react/jsx-closing-bracket-location': 'off',
+    'react/jsx-closing-bracket-location': [1, 'props-aligned'],
     'import/no-extraneous-dependencies': [
       'error',
       {

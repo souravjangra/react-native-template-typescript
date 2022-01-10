@@ -1,26 +1,27 @@
 name: React Native App CI
 # Controls when the action will run.
 on:
-    # Triggers the workflow on push or pull request events but only for the master branch
-    push:
-        branches: [develop]
-    pull_request:
-        branches: [develop]
+  # Triggers the workflow on push or pull request events but only for the master branch
+  push:
+    branches: [develop]
+  pull_request:
+    branches: [develop]
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-    react-native-app-workflow:
-        # The type of runner that the job will run on
-        runs-on: ubuntu-latest
-        # Steps represent a sequence of tasks that will be executed as part of the job
-        steps:
-            - uses: actions/checkout@v2
-            - name: Use Node.js 16.x
-              uses: actions/setup-node@v2
-              with:
-                  node-version: 16.x
-            - name: ci
-              run: npm install      
-            - name: format
-              run: npm run prettier
-            - name: lint
-              run: npm run lint
+  react-native-app-workflow:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js 16.x
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16.x
+      - name: Install npm dependencies
+        run: npm install
+      - name: format
+        run: npm run prettier  
+      - name: lint
+        run: npm run lint
+
