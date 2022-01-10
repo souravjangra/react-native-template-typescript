@@ -9,4 +9,4 @@
  * Copyright (c) 2022 Radiansys Inc
  */
 
-export const Images = {};
+export default {};

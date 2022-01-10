@@ -3,14 +3,15 @@
  * Created Date: Saturday, January 8th 2022
  * Author: Sourav Jangra (sourav@radiansys.com)
  * -----
- * Last Modified: Sunday, January 9th 2022 11:17:23 pm
+ * Last Modified: Monday, January 10th 2022 4:07:56 pm
  * Modified By: Sourav Jangra
  * -----
  * Copyright (c) 2022 Radiansys Inc
  */
 
 /* PLOP_INJECT_IMPORT */
-import { Home } from '@screens/Home';
+/* eslint import/no-cycle: [2, { maxDepth: 1 }] */
+import Home from '@screens/Home';
 
 export type CommonStackParamList = {
   /* PLOP_INJECT_TYPE */

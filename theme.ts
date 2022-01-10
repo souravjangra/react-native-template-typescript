@@ -1,14 +1,3 @@
-/*
- * Project: alautun
- * Created Date: Saturday, January 8th 2022
- * Author: Sourav Jangra (sourav@radiansys.com)
- * -----
- * Last Modified: Sunday, January 9th 2022 11:17:23 pm
- * Modified By: Sourav Jangra
- * -----
- * Copyright (c) 2022 Radiansys Inc
- */
-
 import { DefaultTheme } from 'styled-components';
 import { colors, typography } from '@styles/index';
 
@@ -35,7 +24,15 @@ const theme: DefaultTheme = {
     FONT_REGULAR: typography.FONT_FAMILY_REGULAR,
     FONT_BOLD: typography.FONT_FAMILY_BOLD,
   },
-  borderWidths: { none: 0, xs: 2, sm: 4, md: 8, ls: 16, xl: 32, xxl: 64 },
+  borderWidths: {
+    none: 0,
+    xs: 2,
+    sm: 4,
+    md: 8,
+    ls: 16,
+    xl: 32,
+    xxl: 64,
+  },
   bordersColors: {
     primary: colors.PRIMARY,
     secondary: colors.SECONDARY,

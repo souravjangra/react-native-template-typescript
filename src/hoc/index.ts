@@ -11,4 +11,5 @@
 
 import ManageThemeProvider from './ManagedThemeProvider';
 
+// eslint-disable-next-line import/prefer-default-export
 export { ManageThemeProvider };

@@ -20,9 +20,8 @@ export default function useCustomBackBehaviour(action?: () => void) {
         if (action) {
           action();
           return true;
-        } else {
-          return false;
         }
+        return false;
       };
 
       BackHandler.addEventListener('hardwareBackPress', onBackPress);

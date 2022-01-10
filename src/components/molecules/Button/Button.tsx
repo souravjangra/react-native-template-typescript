@@ -44,8 +44,8 @@ interface ButtonProps
   bgVariant?: VariantTypes;
 }
 
-const variantStyle = (theme: DefaultTheme) => {
-  return variant<ButtonProps, VariantTypes, 'bgVariant'>({
+const variantStyle = (theme: DefaultTheme) =>
+  variant<ButtonProps, VariantTypes, 'bgVariant'>({
     key: 'button',
     prop: 'bgVariant',
     variants: {
@@ -57,7 +57,6 @@ const variantStyle = (theme: DefaultTheme) => {
       },
     },
   });
-};
 
 const Button = styled.TouchableOpacity<ButtonProps>`
   ${compose(color, layout, space, borders, flex, position, flexbox)}

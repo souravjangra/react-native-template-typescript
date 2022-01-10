@@ -1,17 +1,14 @@
 import React from 'react';
-import { StyleSheet } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { Box } from '@components/molecules/Box';
+import { Typography } from '@components/molecules/Typography';
+import { useTheme } from '@hooks/index';
 import { RouteProp, useNavigation, useRoute } from '@react-navigation/core';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import { Box } from '@components/molecules/Box';
-import { Button } from '@components/molecules/Button';
-import { Typography } from '@components/molecules/Typography';
 import { CommonStackParamList } from '@screens/index';
-import { theme } from 'theme';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import Style from './Style';
 
-type {{pascalCase name}}ScreenNavigationProp = NativeStackNavigationProp<
-  CommonStackParamList,
+type {{pascalCase name}}ScreenNavigationProp = NativeStackNavigationProp<CommonStackParamList,
   '{{pascalCase name}}'
 >;
 
@@ -20,9 +17,10 @@ type {{pascalCase name}}ScreenRouteProp = RouteProp<CommonStackParamList, '{{pas
 const {{pascalCase name}}Screen = () => {
   const navigation = useNavigation<{{pascalCase name}}ScreenNavigationProp>();
   const route = useRoute<{{pascalCase name}}ScreenRouteProp>();
+  const theme = useTheme();
 
   return (
-    <SafeAreaView style={styles.safeArea}>
+    <SafeAreaView>
       <Box alignItems="center" justifyContent="center" flex={1}>
         <Typography>{{pascalCase name}}</Typography>
         <Button onPress={() => {
@@ -34,12 +32,5 @@ const {{pascalCase name}}Screen = () => {
     </SafeAreaView>
   );
 };
-
-const styles = StyleSheet.create({
-  safeArea: {
-    flex: 1,
-    backgroundColor: theme.colors.backgroundColor,
-  },
-});
 
 export default {{pascalCase name}}Screen;

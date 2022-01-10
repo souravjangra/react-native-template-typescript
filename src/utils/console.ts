@@ -1,9 +1,10 @@
+/* eslint-disable no-console */
 /*
  * Project: alautun
  * Created Date: Saturday, January 8th 2022
  * Author: Sourav Jangra (sourav@radiansys.com)
  * -----
- * Last Modified: Saturday, January 8th 2022 10:52:17 am
+ * Last Modified: Monday, January 10th 2022 4:05:36 pm
  * Modified By: Sourav Jangra
  * -----
  * Copyright (c) 2022 Radiansys Inc
@@ -11,7 +12,7 @@
 
 import { FileLogger } from 'react-native-file-logger';
 
-export const log = (...args: any[]) => {
+export const log = (...args: unknown[]) => {
   if (__DEV__) {
     console.log(...args);
   } else {
@@ -19,7 +20,7 @@ export const log = (...args: any[]) => {
   }
 };
 
-export const debug = (...args: any[]) => {
+export const debug = (...args: unknown[]) => {
   if (__DEV__) {
     console.debug(...args);
   } else {
@@ -27,7 +28,7 @@ export const debug = (...args: any[]) => {
   }
 };
 
-export const warn = (...args: any[]) => {
+export const warn = (...args: unknown[]) => {
   if (__DEV__) {
     console.warn(...args);
   } else {
@@ -35,7 +36,7 @@ export const warn = (...args: any[]) => {
   }
 };
 
-export const error = (...args: any[]) => {
+export const error = (...args: unknown[]) => {
   if (__DEV__) {
     console.error(...args);
   } else {

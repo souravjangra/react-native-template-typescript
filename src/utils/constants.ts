@@ -26,29 +26,19 @@ export const normalize = (size: number, based: Mode = 'width'): number => {
   return Math.round(PixelRatio.roundToNearestPixel(newSize));
 };
 
-//for width  pixel
-export const wp = (size: number): number => {
-  return normalize(size, 'width');
-};
+// for width  pixel
+export const wp = (size: number): number => normalize(size, 'width');
 
-//for height  pixel
-export const hp = (size: number): number => {
-  return normalize(size, 'height');
-};
+// for height  pixel
+export const hp = (size: number): number => normalize(size, 'height');
 
-//for font  pixel
-export const fp = (size: number): number => {
-  return hp(size);
-};
+// for font  pixel
+export const fp = (size: number): number => hp(size);
 
-//for Margin and Padding vertical pixel
-export const pv = (size: number): number => {
-  return hp(size);
-};
+// for Margin and Padding vertical pixel
+export const pv = (size: number): number => hp(size);
 
-//for Margin and Padding horizontal pixel
-export const ph = (size: number): number => {
-  return wp(size);
-};
+// for Margin and Padding horizontal pixel
+export const ph = (size: number): number => wp(size);
 
 export const IS_IOS = Platform.OS === 'ios';

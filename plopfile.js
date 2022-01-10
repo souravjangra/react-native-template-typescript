@@ -3,11 +3,14 @@
  * Created Date: Saturday, January 8th 2022
  * Author: Sourav Jangra (sourav@radiansys.com)
  * -----
- * Last Modified: Sunday, January 9th 2022 11:17:23 pm
+ * Last Modified: Monday, January 10th 2022 3:09:41 pm
  * Modified By: Sourav Jangra
  * -----
  * Copyright (c) 2022 Radiansys Inc
  */
+
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-unsafe-call */
 
 module.exports = (plop) => {
   plop.setGenerator('component', {
@@ -29,8 +32,8 @@ module.exports = (plop) => {
         type: 'append',
         path: 'src/components/stories.ts',
         // Pattern tells plop where in the file to inject the template
-        pattern: `/* PLOP_INJECT_IMPORT */`,
-        template: `import './{{type}}/{{pascalCase name}}/stories';`,
+        pattern: '/* PLOP_INJECT_IMPORT */',
+        template: "import './{{type}}/{{pascalCase name}}/stories';",
       },
       {
         // Add a new file
@@ -78,24 +81,25 @@ module.exports = (plop) => {
         type: 'append',
         path: 'src/screens/index.ts',
         // Pattern tells plop where in the file to inject the template
-        pattern: `/* PLOP_INJECT_SCREEN */`,
-        template: `{{pascalCase name}}: { component: {{pascalCase name}} },`,
+        pattern: '/* PLOP_INJECT_SCREEN */',
+        template: '{{pascalCase name}}: { component: {{pascalCase name}} },',
       },
       {
         // Action type 'append' injects a template into an existing file
         type: 'append',
         path: 'src/screens/index.ts',
         // Pattern tells plop where in the file to inject the template
-        pattern: `/* PLOP_INJECT_IMPORT */`,
-        template: `import { {{pascalCase name}} } from '@screens/{{pascalCase name}}';`,
+        pattern: '/* PLOP_INJECT_IMPORT */',
+        template:
+          "import {{pascalCase name}} from '@screens/{{pascalCase name}}';",
       },
       {
         // Action type 'append' injects a template into an existing file
         type: 'append',
         path: 'src/screens/index.ts',
         // Pattern tells plop where in the file to inject the template
-        pattern: `/* PLOP_INJECT_TYPE */`,
-        template: `{{pascalCase name}}: undefined;`,
+        pattern: '/* PLOP_INJECT_TYPE */',
+        template: '{{pascalCase name}}: undefined;',
       },
       {
         // Add the component file

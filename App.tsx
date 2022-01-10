@@ -3,29 +3,27 @@
  * Created Date: Friday, January 7th 2022
  * Author: Sourav Jangra (sourav@radiansys.com)
  * -----
- * Last Modified: Sunday, January 9th 2022 11:17:23 pm
+ * Last Modified: Monday, January 10th 2022 3:09:41 pm
  * Modified By: Sourav Jangra
  * -----
  * Copyright (c) 2022 Radiansys Inc
  */
 
-import React, { createContext } from 'react';
+import React from 'react';
 import { FileLogger } from 'react-native-file-logger';
 import useAppState from 'react-native-appstate-hook';
-import { log, warn } from '@utils/console';
-import { ThemeProvider } from 'styled-components';
+import { warn } from '@utils/console';
 import { useNavigationMounting } from '@navigation/RootNavigation';
 import Router from '@navigation/Router';
-import { theme } from 'theme';
-import { Appearance } from 'react-native';
 import { ManageThemeProvider } from '@hoc/index';
 
+// eslint-disable-next-line @typescript-eslint/no-floating-promises
 FileLogger.configure({
   maximumFileSize: 1024 * 1024 * 5, // 5MB,
   maximumNumberOfFiles: 3,
 });
 
-const App = () => {
+function App() {
   useNavigationMounting();
 
   useAppState({
@@ -39,6 +37,6 @@ const App = () => {
       <Router />
     </ManageThemeProvider>
   );
-};
+}
 
 export default App;

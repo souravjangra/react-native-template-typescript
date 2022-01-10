@@ -5,12 +5,10 @@ import Button from './Button';
 
 storiesOf('Button', module)
   .add('Background Color', () => (
-    <Button bgVariant="primary" width={'100%'} height={100} />
+    <Button bgVariant="primary" width="100%" height={100} />
   ))
-  .add('Bordered', () => {
-    return (
-      <Box>
-          <Button bg="blue" size={50} />
-      </Box>
-    );
-  });
+  .add('Bordered', () => (
+    <Box>
+      <Button bg="blue" size={50} />
+    </Box>
+  ));

@@ -3,7 +3,7 @@
  * Created Date: Saturday, January 8th 2022
  * Author: Sourav Jangra (sourav@radiansys.com)
  * -----
- * Last Modified: Saturday, January 8th 2022 12:52:45 pm
+ * Last Modified: Monday, January 10th 2022 3:56:21 pm
  * Modified By: Sourav Jangra
  * -----
  * Copyright (c) 2022 Radiansys Inc
@@ -16,12 +16,10 @@ import Typography from './Typography';
 
 storiesOf('Typography', module)
   .add('Background Color', () => (
-    <Typography bgVariant="primary" width={'100%'} height={100} />
+    <Typography bgVariant="primary" width="100%" height={100} />
   ))
-  .add('Bordered', () => {
-    return (
-      <Box>
-        <Typography bg="blue" size={50} />
-      </Box>
-    );
-  });
+  .add('Bordered', () => (
+    <Box>
+      <Typography bg="blue" size={50} />
+    </Box>
+  ));

@@ -3,7 +3,7 @@
  * Created Date: Saturday, January 8th 2022
  * Author: Sourav Jangra
  * -----
- * Last Modified: Saturday, January 8th 2022 12:32:13 pm
+ * Last Modified: Monday, January 10th 2022 3:09:41 pm
  * Modified By: Sourav Jangra
  * -----
  * Copyright (c) 2022 Radiansys Inc
@@ -44,8 +44,8 @@ interface BoxProps
   bgVariant?: VariantTypes;
 }
 
-const variantStyle = (theme: DefaultTheme) => {
-  return variant<BoxProps, VariantTypes, 'bgVariant'>({
+const variantStyle = (theme: DefaultTheme) =>
+  variant<BoxProps, VariantTypes, 'bgVariant'>({
     key: 'box',
     prop: 'bgVariant',
     variants: {
@@ -57,7 +57,6 @@ const variantStyle = (theme: DefaultTheme) => {
       },
     },
   });
-};
 
 const Box = styled.View<BoxProps>`
   ${compose(color, layout, space, borders, flex, position, flexbox)}

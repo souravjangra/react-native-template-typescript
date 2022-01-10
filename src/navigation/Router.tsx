@@ -3,7 +3,7 @@
  * Created Date: Saturday, January 8th 2022
  * Author: Sourav Jangra
  * -----
- * Last Modified: Saturday, January 8th 2022 2:38:05 pm
+ * Last Modified: Monday, January 10th 2022 3:09:41 pm
  * Modified By: Sourav Jangra
  * -----
  * Copyright (c) 2022 Radiansys Inc
@@ -42,22 +42,25 @@ export default function Router() {
       ref={navigationRef}
       onReady={() => {
         setTimeout(() => {
-          RNBootSplash.hide({ fade: true });
+          RNBootSplash.hide({ fade: true })
+            .then(() => {})
+            .catch((err) => {});
         }, 3000);
-      }}>
+        // eslint-disable-next-line react/jsx-closing-bracket-location
+      }}
+    >
       <SafeAreaProvider>
         <Stack.Navigator screenOptions={screenOptions}>
           {Object.entries({
             ...commonScreens,
-          }).map(([name, props]) => {
-            return (
-              <Stack.Screen
-                key={name}
-                name={name as keyof ParamList}
-                {...props}
-              />
-            );
-          })}
+          }).map(([name, props]) => (
+            <Stack.Screen
+              key={name}
+              name={name as keyof ParamList}
+              // eslint-disable-next-line react/jsx-props-no-spreading
+              {...props}
+            />
+          ))}
         </Stack.Navigator>
       </SafeAreaProvider>
     </NavigationContainer>

@@ -10,5 +10,6 @@
  */
 
 import * as Constants from './constants';
+import * as Console from './console';
 
-export { Constants };
+export { Constants, Console };

@@ -1,9 +1,13 @@
+/* eslint-disable @typescript-eslint/no-unsafe-return */
+/* eslint-disable @typescript-eslint/ban-types */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /*
  * Project: alautun
  * Created Date: Saturday, January 8th 2022
  * Author: Sourav Jangra
  * -----
- * Last Modified: Saturday, January 8th 2022 10:51:37 am
+ * Last Modified: Monday, January 10th 2022 4:17:11 pm
  * Modified By: Sourav Jangra
  * -----
  * Copyright (c) 2022 Radiansys Inc
@@ -34,7 +38,7 @@ const getDeviceLocale = (): string => {
 };
 
 const languageDetector: LanguageDetectorAsyncModule = {
-  type: 'languageDetector' as 'languageDetector',
+  type: 'languageDetector' as const,
   async: true, // flags below detection to be async
   detect: (cb: Function): Promise<string> =>
     AsyncStorage.getItem('user-language')
@@ -68,6 +72,8 @@ i18n
     interpolation: {
       escapeValue: false, // react is already safe from xss
     },
-  });
+  })
+  .then(() => {})
+  .catch(() => {});
 
 export default i18n;

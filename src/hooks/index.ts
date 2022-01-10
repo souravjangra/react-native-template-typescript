@@ -3,17 +3,16 @@
  * Created Date: Sunday, January 9th 2022
  * Author: Sourav Jangra (sourav@radiansys.com)
  * -----
- * Last Modified: Sunday, January 9th 2022 11:17:23 pm
+ * Last Modified: Monday, January 10th 2022 3:09:41 pm
  * Modified By: Sourav Jangra
  * -----
  * Copyright (c) 2022 Radiansys Inc
  */
 
 import React, { createContext } from 'react';
-import { Appearance } from 'react-native';
-import { default as useCustomBackBehaviour } from './useCustomBackBehaviour';
-import { default as useStartupTime } from './useStartupTime';
-import { ColorSchemeName } from 'react-native';
+import { Appearance, ColorSchemeName } from 'react-native';
+import useCustomBackBehaviour from './useCustomBackBehaviour';
+import useStartupTime from './useStartupTime';
 
 const defaultMode = Appearance.getColorScheme() || 'light';
 

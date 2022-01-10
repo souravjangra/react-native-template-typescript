@@ -33,8 +33,8 @@ interface TypographyProps
   bgVariant?: VariantTypes;
 }
 
-const variantStyle = (theme: DefaultTheme) => {
-  return variant<TypographyProps, VariantTypes, 'bgVariant'>({
+const variantStyle = (theme: DefaultTheme) =>
+  variant<TypographyProps, VariantTypes, 'bgVariant'>({
     key: 'typography',
     prop: 'bgVariant',
     variants: {
@@ -46,7 +46,6 @@ const variantStyle = (theme: DefaultTheme) => {
       },
     },
   });
-};
 
 const Typography = styled.Text<TypographyProps>`
   ${compose(color, layout, space, borders, flex, position, flexbox)}

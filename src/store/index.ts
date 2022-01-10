@@ -1,9 +1,13 @@
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-var-requires */
+/* eslint-disable global-require */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /*
  * Project: alautun
  * Created Date: Saturday, January 8th 2022
  * Author: Sourav Jangra (sourav@radiansys.com)
  * -----
- * Last Modified: Saturday, January 8th 2022 2:45:51 pm
+ * Last Modified: Monday, January 10th 2022 4:07:56 pm
  * Modified By: Sourav Jangra
  * -----
  * Copyright (c) 2022 Radiansys Inc
@@ -11,8 +15,8 @@
 
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
 import { configureStore } from '@reduxjs/toolkit';
-import rootReducer from './rootReducer';
 import { log } from '@utils/console';
+// eslint-disable-next-line import/no-unresolved
 import { ENV } from '@env';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {
@@ -26,6 +30,7 @@ import {
   REHYDRATE,
 } from 'redux-persist';
 import { setupListeners } from '@reduxjs/toolkit/query';
+import rootReducer from './rootReducer';
 
 log({ ENV });
 
@@ -44,6 +49,7 @@ const dev = ENV === 'local';
 
 if (dev) {
   const createDebugger = require('redux-flipper').default;
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-call
   middlewares.push(createDebugger());
 }
 const store = configureStore({

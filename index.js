@@ -3,32 +3,34 @@
  * Created Date: Friday, January 7th 2022
  * Author: Sourav Jangra (sourav@radiansys.com)
  * -----
- * Last Modified: Friday, January 7th 2022 10:51:15 am
+ * Last Modified: Monday, January 10th 2022 2:56:02 pm
  * Modified By: Sourav Jangra
  * -----
  * Copyright (c) 2022 Radiansys Inc
  */
 
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
 import 'react-native-gesture-handler';
 import React from 'react';
-import { AppRegistry, LogBox } from 'react-native';
-import App from './App';
-import { name as appName } from './app.json';
+import { AppRegistry } from 'react-native';
+import { PersistGate } from 'redux-persist/integration/react';
+import { Provider } from 'react-redux';
 import { enableScreens } from 'react-native-screens';
 import { store, persistor } from '@store/index';
-import { Provider } from 'react-redux';
+import App from './App';
+import { name as appName } from './app.json';
 import getStorybookUI from './storybook';
-import { PersistGate } from 'redux-persist/integration/react';
 
 enableScreens();
 
 let EntryPoint;
 const showStorybook = false;
 
+// eslint-disable-next-line no-undef
 if (showStorybook && __DEV__) {
   EntryPoint = getStorybookUI();
 } else {
-  EntryPoint = () => {
+  EntryPoint = function () {
     return (
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
@@ -39,4 +41,5 @@ if (showStorybook && __DEV__) {
   };
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unsafe-return
 AppRegistry.registerComponent(appName, () => EntryPoint);

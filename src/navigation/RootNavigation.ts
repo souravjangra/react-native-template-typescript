@@ -3,7 +3,7 @@
  * Created Date: Saturday, January 8th 2022
  * Author: Sourav Jangra
  * -----
- * Last Modified: Saturday, January 8th 2022 10:54:38 am
+ * Last Modified: Sunday, January 9th 2022 11:17:23 pm
  * Modified By: Sourav Jangra
  * -----
  * Copyright (c) 2022 Radiansys Inc
@@ -14,7 +14,6 @@ import { createRef, MutableRefObject, useEffect } from 'react';
 import {
   CommonActions,
   createNavigationContainerRef,
-  NavigationContainerRef,
 } from '@react-navigation/native';
 import { warn } from '@utils/console';
 
@@ -98,5 +97,6 @@ export function getCurrentRoute() {
 export function isFocused() {
   if (!isMountedRef.current || !navigationRef.current) return false;
 
+  // eslint-disable-next-line @typescript-eslint/unbound-method
   return navigationRef.current.isFocused;
 }
