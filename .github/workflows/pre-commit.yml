@@ -19,8 +19,8 @@ jobs:
               with:
                   node-version: 16.x
             - name: lint
-              run: npm run lint
+              run: npx eslint . --ext .js,.jsx,.ts,.tsx
             - name: fix
-              run: npm run eslint . --fix  
+              run: npx eslint . --fix  
             - name: prettier
-              run: npm run prettier --write .
+              run: npx prettier --write .
